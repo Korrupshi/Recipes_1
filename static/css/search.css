@@ -1,0 +1,11 @@
+*{
+  background-color: coral;
+  color: aqua;
+}
+
+ .row{
+   background-color: blue;
+   width: 100%;
+   height: 60px;
+
+ }

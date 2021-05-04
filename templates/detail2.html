@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+   
+    
+    <style>
+
+       /* Navbar */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.navbar-nav a{
+    color: white !important;
+    margin: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-shadow: 1px 1px 10px #000;
+}
+.navbar-toggler {
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+.nav-link:hover{
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+.nav-link{
+    margin-top: 5px !important;
+    font-size: 20px !important;
+}
+.card{
+    width: 550px;
+    border-radius: 0.5em;
+    box-shadow: 0 0 2em -1em black;
+    background-color: rgba(255, 255, 255, 0.884);
+    align-items: center;
+    border-radius: 0;
+   padding: 10px;
+
+}
+
+.space{
+    justify-content: space-evenly;
+    align-items: center;
+ 
+}
+.mid{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   margin: 0;
+    padding: 5px;
+}
+.container-fluid{
+    
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-size: cover;
+   background-image: url({{recipe.image}});
+}
+.jumbotron{
+    background-color: rgba(245, 238, 228, 0.651);
+  
+    margin: 50px 50px 0px 50px;
+    padding-bottom: 10px;
+    background-position: center;
+     background-repeat: no-repeat; 
+     background-size: cover;
+}
+.page{
+    font-size: 20px;
+    color: white;
+}
+pre {
+          white-space: pre-wrap;       /* Since CSS 2.1 */
+          white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+          white-space: -pre-wrap;      /* Opera 4-6 */
+          white-space: -o-pre-wrap;    /* Opera 7 */
+          word-wrap: break-word;       /* Internet Explorer 5.5+ */
+         /* background-color: hotpink; */
+           text-align: left; 
+           padding-left: 5px;
+           margin-left: 10px;
+           padding-right: 5px;
+           margin-right: 10px
+           
+           }
+hr {
+   size: 3px;
+   color: black;
+}
+.list{
+   border: 1px solid rgb(70, 66, 66);
+}
+.foot{
+   background-color: #6b6827;
+   height: 60px;
+   width: 100%;
+}
+
+h1{
+   margin: 0%;
+   padding: 0;
+}
+.circle{
+         background-color: #cbc0d3;
+         border-radius: 40px;
+         padding: 10px;
+         }
+         .circle:hover{
+         background-color:#efd3d7;
+         }
+         .rectangle{
+         background-color: #81b29a;
+         padding: 10px;
+         }
+         .rectangle:hover{
+         background-color:#dee2ff;
+         }
+.tit{
+   background-color: rgba(231, 184, 82, 0.171);
+   margin-bottom: 30px;
+}
+    </style>
+
+<body>
+    
+   <div class="container-fluid">
+       <!-- Navbar -->
+      <div class="row navbar navbar-expand-md navbar-dark" style="background-color: rgba(0, 0, 0, 0.671);">
+         <!-- logo -->
+         <a class="navbar-brand" href="/">
+            <img class="logo" src="/static/img/logo_dark.png" alt="Logo" style="width: 30px;">
+         </a>
+         <!-- Expand button -->
+         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- Expand button collapse function -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto"> 
+               <li class="nav-item ml-auto">
+                  <a class="nav-link" aria-current="page" href="/" >Home</a>
+               </li>
+               <li class="nav-item ml-auto">
+                  <a class="nav-link" href="search?dinner=on&search={{query}}">Dinner</a>
+               </li>
+               <li class="nav-item ml-auto">
+                  <a class="nav-link" href="search?lunch=on&search={{query}}">Lunch</a>
+               </li>
+               <li class="nav-item ml-auto">
+                  <a class="nav-link" href="search?side=on&search={{query}}">Sides</a>
+               </li>
+               
+            </ul>
+         </div>
+      </div>
+
+      <!-- Background+ Jumbo -->
+      <div class="jumbotron">  
+
+      <!-- Title card info-->
+      <div class="row">
+         <div class="card tit mx-auto">
+            <h1>
+               <a href="{{recipe.link}}" style="color: #504D15; font-weight: bold;">{{recipe.title}}</a>
+            </h1>
+           <b> <p style="text-align : center; font-size: 18px;color: #504D15; text-transform: capitalize;">{{recipe.topic}}</p></b>
+                           <div class="row">
+                              <div class="col-md-12 col-xl-12 d-flex justify-content-center">
+                                 <div class="d-inline">
+                                    <label for="calories" style="color: #504D15;">Calories</label>
+                                    <span id="calories" class="border circle" style="color: #504D15;">{{recipe.calories}} Kcal</span>
+                                 </div>
+                                 <div style="border-left: 2px solid green;height: 40px; margin-left:5px;"></div>
+                                 <div class="d-inline">
+                                    <label for="protein" class="mx-2">Protein</label>
+                                    <span id="protein" class="border circle" style="color: #504D15;">{{recipe.protein}} g</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <hr>
+                           <div class="row">
+                              <div class="col-md-12 col-xl-12 d-flex justify-content-center">
+                                 <div class="d-inline">
+                                    <label for="calories">Prep:</label>
+                                    <span id="calories" class="border rectangle" style="color: #504D15;">{{recipe.time}} mins</span>
+                                 </div>
+                                 <div class="d-inline">
+                                    <label for="carbs" class="mx-2">Servings:</label>
+                                    <span id="carbs" class="border rectangle" style="color: #504D15;">{{recipe.servings}}</span>
+                                 </div>
+                              </div>
+                           </div>
+
+         </div>
+
+      </div>
+      
+      <!-- Recipe steps -->
+      <div class="row">
+        <!-- Ingredients -->
+         <div class="col-md-5 mx-auto mid">
+            <div class="card list mx-auto" style="min-height: 400px;">
+               <h1 style="color: #504D15; font-weight: bold;">Ingredients:</h1>
+               <hr>
+               <pre style="font-family:roboto; font-size:100%;">{{recipe.ingredients}}</pre>
+            </div>
+         </div>
+         <!-- Instructions -->
+         <div class="col-md-5 mx-auto mid">
+            <div class="card list mx-auto" style="min-height: 400px;">
+               <h1 style="color: #504D15; font-weight: bold;">Instructions:</h1>
+               <hr>
+               <pre style="font-family:roboto; font-size:100%;">{{recipe.directions}}</pre>
+            </div>
+         </div>
+      </div>
+
+      
+      <!-- Jumbo end -->
+   </div> 
+</div>   
+<!-- Link -->
+<div class="row foot" style=" width: 101%;">
+   <div class="col-md-12 mid">
+      <a  href="{{recipe.link}}" style="color: white; font-size: x-large; text-align: center;">Link to original recipe</a>
+      </div>
+   </div>
+   
+   
+   <!-- SCRIPTS -->
+   {% include 'scripts.html' %}
+   
+</body>
+</html>

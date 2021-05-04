@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/custom2.min.css' %}"> -->
+   
+    
+    <style>
+       /* Navbar */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.navbar-nav a{
+    color: white !important;
+    margin: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-shadow: 1px 1px 10px #000;
+}
+.navbar-toggler {
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+}
+.nav-link:hover{
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+.nav-link{
+    margin-top: 5px !important;
+    font-size: 20px !important;
+}
+.card{
+    width: 300px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    box-shadow: 0 0 2em -1em black;
+
+
+}
+.space{
+    justify-content: space-evenly;
+    align-items: center;
+ 
+}
+.mid{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.container-fluid{
+    background-image: url("/static/img/matcha.jpeg");
+     background-position: center;
+     background-repeat: no-repeat; 
+     background-size: cover;
+
+}
+.jumbotron{
+    background-color: rgba(255, 255, 255, 0.61);
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    margin: 20px 20px 20px 20px;
+
+}
+.page{
+    font-size: 20px;
+    color: white;
+}
+.void{
+    width: 100%;
+    height: 50px;
+}
+.foot{
+   background-color: #6b6827
+}
+    </style>
+
+<body>
+    
+    <div class="container-fluid">
+    <!-- Navbar -->
+    <div class="row navbar navbar-expand-md navbar-dark" style="background-color: rgba(0, 0, 0, 0.671);">
+        <!-- logo -->
+        <a class="navbar-brand" href="/">
+            <img class="logo" src="/static/img/logo_dark.png" alt="Logo" style="width: 30px;">
+        </a>
+        <!-- Expand button -->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+ <!-- Expand button collapse function -->
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mx-auto"> 
+                     <li class="nav-item ml-auto">
+                         <a class="nav-link" aria-current="page" href="/" >Home</a>
+                     </li>
+                     <li class="nav-item ml-auto">
+                        <a class="nav-link" href="search?dinner=on&search={{query}}">Dinner</a>
+                    </li>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link" href="search?lunch=on&search={{query}}">Lunch</a>
+                    </li>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link" href="search?side=on&search={{query}}">Sides</a>
+                    </li>
+               
+                  </ul>
+                </div>
+            </div>
+
+                <!-- Results found -->
+                 <div class="row">
+                    <div class="col void" style="margin: 10px;">
+                        
+                        </div>
+                    </div>
+                        <!-- queries -->
+                        <div class="jumbotron">
+                            <div class="row">
+                                <div class="col" style="margin: 10px;">
+                                    <b><h2 class="text-center" style="color: #504D15;">
+                                        {{total}} Result (s) Found.
+                                    </h2></b>
+                                </div>
+                            </div>
+                        <div class="row space">
+                           
+                            {% for recipe in results %}
+                            <!-- result loads in columns -->
+                            <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 mid" style="margin: 30px;">
+                                <div class="card hoverable mx-auto">
+                                    <!-- Card image -->
+                                    <a href="{{recipe.get_url}}"><img class=" card card-img-top" src="{{recipe.image}}" alt="Card image cap" width="600" height="300" style=" 
+                                    object-fit: cover;"></a>
+                                    <!-- Card content -->
+                                    <div class="card-body" style="background-color: #504D15; max-height: 100px;">
+                                       <!-- Title -->
+                                       <b><a href="{{recipe.get_url}}" style= "font-size:150%; text-align: center; color: white;" >{{recipe.title}}</a></b>
+                                    </div>
+                                </div>
+                            </div>
+                                 <!-- Card -->
+                                 {% endfor %}
+                        </div>
+                    </div>
+                        
+                        <!-- Pagination -->
+                        <div class="row foot">
+                            <div class="col-md-12 mid" >
+                                <ul class="pagination mid">
+                                    <!-- First -->
+                     {% if page == "1" %}
+                     <li class="page-item disabled clearfix d-none d-md-block">
+                        <a class="page-link" href="#" style="color: white;">
+                           <span class="page" style="color: white;">First</span>
+                        </a>
+                     </li>
+                     {% else %}
+                     <li class="page-item clearfix d-none d-md-block">
+                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page=1">
+                           <span class="page" style="color: white;">First</span></a>
+                     </li>
+                     {% endif %}
+
+                     <!-- Arrow left -->
+                     {% if results.has_previous %}
+                     <li class="page-item">
+                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.previous_page_number}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only page">Previous</span>
+                        </a>
+                     </li>
+                     {% else %}
+                     <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only page" >Previous</span>
+                        </a>
+                     </li>
+                     {% endif %}
+
+                     <!-- Numbers -->
+                     {% for number in results.paginator.page_range %}
+                     <li class="page-item page">
+                        <a class="page-link page" href="?{{topic}}=on&search={{query}}&page={{number}}">{{number}}</a>
+                     </li>
+                     {% endfor %}
+
+
+                     <!-- Arrow right -->
+                     {% if results.has_next %}
+                     <li class="page-item">
+                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.next_page_number}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only page">Next</span>
+                        </a>
+                     </li>
+                     {% else %}
+                     <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only page">Next</span>
+                        </a>
+                     </li>
+                     {% endif %}
+
+                     <!-- Last -->
+                     {% if page != results.paginator.num_pages %}
+                     <li class="page-item clearfix d-none d-md-block">
+                        <a class="page-link" href="?{{topic}}=on&search={{query}}&page={{results.paginator.num_pages}}">
+                           <span class="page" style="color: white;">Last</span></a>
+                     </li>
+                     {% else %}
+                     <li class="page-item clearfix d-none d-md-block disabled">
+                        <a class="page-link page" href="#"><span style="color: white;">Last</span></a>
+                     </li>
+                     {% endif %}
+                  </ul>
+               </nav>
+                        
+    </div>
+</div>
+
+{% include 'scripts.html' %}
+</body>
+</html>

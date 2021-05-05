@@ -46,11 +46,20 @@
 </div>
 <!-- Search bar -->
 <div class="row mid ban">
-<form class="search" action="{% url 'search' %}" method="get">
-   <input type="text" class="search_text" name="search" placeholder="Search here...">
-   <button type="submit" style="float:right">Search</button>
-</form>  
-</div>
+   <div class="search-item"><form
+     class="search"
+             action="{% url 'search' %}"
+     method="get"
+   >
+     <input
+       type="text"
+       class="search_text"
+       name="search"
+       placeholder="Search here..."
+     /></div>
+     <div class="search-item"><button type="submit" class="butt">Search</button></div>
+   </form>
+ </div>
 
 <!-- Recipe title -->
 <div class="row mid mmin">

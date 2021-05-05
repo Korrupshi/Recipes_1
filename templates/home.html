@@ -60,14 +60,18 @@
 
     <!-- Search bar -->
     <div class="row mid ban">
-      <form class="search" action="{% url 'search' %}" method="get">
+      <div class="search-item"><form
+        class="search"
+                action="{% url 'search' %}"
+        method="get"
+      >
         <input
           type="text"
           class="search_text"
           name="search"
           placeholder="Search here..."
-        />
-        <button type="submit" style="float: right">Search</button>
+        /></div>
+        <div class="search-item"><button type="submit" class="butt">Search</button></div>
       </form>
     </div>
 
@@ -102,10 +106,7 @@
               >
               <p class="card__text line-clamp">{{recipe.description}}</p>
             </div>
-            <!-- Card button -->
-            <!-- <div class="card-btn">
-                  <button class="card-butt">Recipe</button>
-               </div> -->
+        
           </div>
         </li>
         {% endfor %}

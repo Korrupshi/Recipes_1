@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
 // body {
 //   background: #2D3142;
 //   font-family: 'Raleway', sans-serif;
 // }
-
 
 /* Heading */
 
@@ -21,7 +20,6 @@
 //   padding: 10px;
 // }
 
-
 /* Layout Styling */
 
 #container {
@@ -34,35 +32,33 @@
   justify-content: center;
 }
 
-
 /* Button Styles */
 
 .button2 {
   display: inline-flex;
   height: 40px;
   width: 150px;
-  border: 2px solid #BFC0C0;
+  border: 2px solid #bfc0c0;
   margin: 20px 20px 20px 20px;
-  color: #BFC0C0;
+  color: #bfc0c0;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  
-  .active{
+
+  .active {
     background-color: $supp-color !important;
   }
 }
 
 a {
-  color: #BFC0C0;
+  color: #bfc0c0;
   text-decoration: none;
   letter-spacing: 1px;
 }
-
 
 /* Second Button */
 
@@ -74,7 +70,7 @@ a {
 
 #button-2 a {
   position: relative;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
 }
 
 #slide {
@@ -83,7 +79,7 @@ a {
   left: -200px;
   background: $supp-color;
   position: absolute;
-  transition: all .2s ease-Out;
+  transition: all 0.2s ease-Out;
   bottom: 0;
 }
 
@@ -92,7 +88,5 @@ a {
 }
 
 #button-2:hover a {
-  color: #2D3142;
+  color: #2d3142;
 }
-
-

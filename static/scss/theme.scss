@@ -78,11 +78,16 @@ nav {
 // Search function
 // SEARCH BEGINS
 .search {
-  width: 500px;
+  width: 30vw;
+  max-width: 500px;
   height: 40px;
   background: rgba($primary-color, 0.9);
   border-radius: 3px;
   border: 1px solid $text-color;
+
+  .search-item {
+    display: inline-block;
+  }
 
   input {
     width: 370px;
@@ -99,18 +104,17 @@ nav {
   }
 }
 
-//   Card button
-button {
-  position: relative;
-  float: none;
+.butt {
+  border: 1px solid $text-color;
   border: 0;
   padding: 0;
   cursor: pointer;
   height: 40px;
-  width: 120px;
-  color: #fff;
-  background: transparent;
-  border-left: 1px solid #fff;
+  width: 15vw;
+  max-width: 120px;
+  color: $text-color;
+  background: rgba($secondary-color, 0.4);
+  border: 1px solid $text-color;
   border-radius: 0 3px 3px 0;
   &:hover {
     background: $text-color;
@@ -123,6 +127,31 @@ button {
     outline: 0;
   }
 }
+
+//   Card button
+// button {
+//   position: relative;
+//   float: none;
+//   border: 0;
+//   padding: 0;
+//   cursor: pointer;
+//   height: 40px;
+//   width: 120px;
+//   color: #fff;
+//   background: transparent;
+//   border-left: 1px solid #fff;
+//   border-radius: 0 3px 3px 0;
+//   &:hover {
+//     background: $text-color;
+//     color: $secondary-color;
+//   }
+//   &:active {
+//     box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+//   }
+//   &:focus {
+//     outline: 0;
+//   }
+// }
 
 // SEARCH ENDS
 

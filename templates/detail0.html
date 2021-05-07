@@ -21,28 +21,14 @@
 
   <!-- Main banner -->
   <div class="banner mid" style="height: 200px;">
-    <!-- Navbar -->
-<header class="mid">
-<nav class="menu mid">
-   <div class="row mid">
-      
-    <ul class="menu-nav">
-        <li class="menu-nav_item mid">
-            <a href="/" class="menu-nav_link mid">Home</a>
-        </li>
-        <li class="menu-nav_item">
-            <a href="search?dinner=on&search=" class="menu-nav_link">Dinner</a>
-        </li>
-        <li class="menu-nav_item">
-            <a href="search?lunch=on&search=" class="menu-nav_link">Lunch</a>
-        </li>
-        <li class="menu-nav_item">
-            <a href="search?side=on&search=" class="menu-nav_link">Sides</a>
-        </li>
-    </ul>
-   </div>
-</nav>
-</header>
+<!-- Navbar Responsive -->
+<div class="topnav mid" id="myTopnav">
+   <a href="/" class="">Home</a>
+   <a href="search?dinner=on&search=">Dinner</a>
+   <a href="search?lunch=on&search=">Lunch</a>
+   <a href="search?side=on&search=">Sides</a>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+ </div> 
 </div>
 <!-- Search bar -->
 <div class="row mid ban">
@@ -109,6 +95,18 @@
    </div>
    <!-- Copyright -->
 </footer>
+<!-- Navbar mobile script -->
+<script>
+   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+   function myFunction() {
+     var x = document.getElementById("myTopnav");
+     if (x.className === "topnav") {
+       x.className += " responsive";
+     } else {
+       x.className = "topnav";
+     }
+   } 
+   </script>
 
 </body>
 </html>

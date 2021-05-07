@@ -3,198 +3,212 @@
 
 // General
 body {
-  // background-color: $primary-color;
-  background-color: $primary-color;
-  color: $text-color;
-  height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
+	// background-color: $primary-color;
+	background-color: $primary-color;
+	color: $text-color;
+	height: 100vh;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 a {
-  text-decoration: none;
-  color: $text-color !important;
+	text-decoration: none;
+	color: $text-color !important;
 }
 .row {
-  min-height: 50px;
+	min-height: 50px;
 }
 .row2 {
-  min-height: 50px;
-  background-color: rgba($primary-color, 0.8);
+	min-height: 50px;
+	background-color: rgba($primary-color, 0.8);
 }
 hr {
-  background-color: $text-color !important;
-  height: 1px !important;
-  width: 90%;
+	background-color: $text-color !important;
+	height: 1px !important;
+	width: 90%;
 }
 
 // Navbar
 
 nav {
-  background-color: rgba(0, 0, 0, 0.788);
-  height: 60px;
-  width: 100%;
+	background-color: rgba(0, 0, 0, 0.788);
+	height: 60px;
+	width: 100%;
 }
 
 .menu-nav {
-  margin: 20px 0px;
-  color: $secondary-color !important;
+	margin: 20px 0px;
+	color: $secondary-color !important;
 
-  font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .menu-nav_item {
-  display: inline;
-  margin: 20px 20px;
+	display: inline;
+	margin: 20px 20px;
 }
 .menu-nav_link {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 // Banner
 .banner {
-  align-items: center;
-  text-align: center;
-  height: 400px;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: linear-gradient(
-      to right,
-      rgba($secondary-color, 0.8),
-      rgba($secondary-color, 0.1)
-    ),
-    url("../img/banner.jpg") center;
-  background-size: cover;
+	align-items: center;
+	text-align: center;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: linear-gradient(
+			to right,
+			rgba($secondary-color, 0.8),
+			rgba($secondary-color, 0.1)
+		),
+		url("../img/banner.jpg") center;
+	background-size: cover;
+}
+
+.row-title {
+	color: $text-color;
+	text-shadow: 4px 4px 2px $supp-color;
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+.row-title h1 {
+	margin-top: 100px;
+	margin-bottom: 7px;
+	text-transform: uppercase;
+	font-size: 50px;
+	letter-spacing: 2px;
 }
 
 // Search function
 // SEARCH BEGINS
 .search {
-  width: 30vw;
-  max-width: 500px;
-  height: 40px;
-  background: rgba($primary-color, 0.9);
-  border-radius: 3px;
-  border: 1px solid $text-color;
+	width: 30vw;
+	max-width: 500px;
+	height: 40px;
+	background: rgba($primary-color, 0.9);
+	border-radius: 3px;
+	border: 1px solid $text-color;
 
-  .search-item {
-    display: inline-block;
-  }
+	.search-item {
+		display: inline-block;
+	}
 
-  input {
-    width: 370px;
-    padding: 10px 5px;
-    float: left;
-    color: #ccc;
-    border: 0;
-    background: transparent;
-    border-radius: 3px 0 0 3px;
-    &:focus {
-      outline: 0;
-      background: transparent;
-    }
-  }
+	input {
+		// width: 370px;
+		padding: 10px 5px;
+		float: left;
+		color: #ccc;
+		border: 0;
+		background: transparent;
+		border-radius: 3px 0 0 3px;
+		&:focus {
+			outline: 0;
+			background: transparent;
+		}
+	}
 }
 
 .butt {
-  border: 1px solid $text-color;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  height: 40px;
-  width: 15vw;
-  max-width: 120px;
-  color: $text-color;
-  background: rgba($secondary-color, 0.4);
-  border: 1px solid $text-color;
-  border-radius: 0 3px 3px 0;
-  &:hover {
-    background: $text-color;
-    color: $secondary-color;
-  }
-  &:active {
-    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
-  }
-  &:focus {
-    outline: 0;
-  }
+	border: 1px solid $text-color;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	height: 40px;
+	width: 15vw;
+	max-width: 120px;
+	color: $text-color;
+	background: rgba($secondary-color, 0.4);
+	border: 1px solid $text-color;
+	border-radius: 0 3px 3px 0;
+	&:hover {
+		background: $text-color;
+		color: $secondary-color;
+	}
+	&:active {
+		box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+	}
+	&:focus {
+		outline: 0;
+	}
 }
 
 // SEARCH ENDS
 
 // Recipe display
 .jumbotron {
-  width: 90%;
-  height: auto;
-  min-height: 500px;
-  // margin-top: 50px;
-  background-color: rgba($secondary-color, 0.7);
-  margin-bottom: 30px;
-  padding-top: 30px;
-  padding-bottom: 20px;
+	width: 90%;
+	height: auto;
+	min-height: 500px;
+	// margin-top: 50px;
+	background-color: rgba($secondary-color, 0.7);
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
 // Paginator
 .page {
-  color: $text-color;
-  background-color: rgba($primary-color, 0);
-  font-weight: 600;
-  border-color: rgba(255, 255, 255, 0);
+	color: $text-color;
+	background-color: rgba($primary-color, 0);
+	font-weight: 600;
+	border-color: rgba(255, 255, 255, 0);
 }
 .page-link {
-  color: $text-color;
-  background-color: rgba($primary-color, 0);
-  font-weight: 600;
-  border-color: rgba(255, 255, 255, 0);
+	color: $text-color;
+	background-color: rgba($primary-color, 0);
+	font-weight: 600;
+	border-color: rgba(255, 255, 255, 0);
 
-  &:hover {
-    color: $text-color;
-    background-color: $primary-color;
-  }
+	&:hover {
+		color: $text-color;
+		background-color: $primary-color;
+	}
 }
 .page-item {
-  color: $text-color;
-  background-color: rgba($primary-color, 0);
-  font-weight: 600;
-  border-color: rgba(255, 255, 255, 0);
+	color: $text-color;
+	background-color: rgba($primary-color, 0);
+	font-weight: 600;
+	border-color: rgba(255, 255, 255, 0);
 }
 
 // Footer
 .foot {
-  background-color: $supp-color;
-  color: $text-color;
+	background-color: $supp-color;
+	color: $text-color;
 }
 footer {
-  background-color: $supp-color;
-  color: $text-color;
+	background-color: $supp-color;
+	color: $text-color;
 }
 
 .tit-detail {
-  color: $text-color;
-  margin-bottom: 30px;
-  margin-top: 10px;
+	color: $text-color;
+	margin-bottom: 30px;
+	margin-top: 10px;
 }
 .tit {
-  background-color: rgba($primary-color, 0.3);
-  padding: 5px;
+	background-color: rgba($primary-color, 0.3);
+	padding: 5px;
 }
 
 // Detail page
 #extra {
-  border-right: 1px solid $text-color;
-  border-left: 1px solid $text-color;
-  padding: 10px;
-  width: 50px;
-  height: 30px;
-  padding: 5px;
-  text-align: center;
-  background-color: rgba($supp-color, 0.4);
+	border-right: 1px solid $text-color;
+	border-left: 1px solid $text-color;
+	width: 100px;
+	height: 30px;
+	padding: 5px;
+	margin: 3px;
+	text-align: center;
+	background-color: rgba($supp-color, 0.4);
 }

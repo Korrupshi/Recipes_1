@@ -38,6 +38,7 @@ def search(request):
         topic = "dinner"
 
     total = results.count()
+    q_length = len(query)
 
     #Multiple pages for the search results
     paginator = Paginator(results, 10)
@@ -56,6 +57,7 @@ def search(request):
         "query": query,
         "results": results,
         "recipes": recipes,
+        "q_length": q_length,
     }
     return render(request, "filter.html", context)
 

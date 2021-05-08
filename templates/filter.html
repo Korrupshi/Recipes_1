@@ -43,37 +43,64 @@
    <div class="banner mid">
          <!-- Navbar Responsive -->
       <div class="topnav mid" id="myTopnav">
-         <a href="/" class="">Home</a>
+         <a href="/" class="" id="toppy">Home</a>
          <a href="search?dinner=on&search=">Dinner</a>
          <a href="search?lunch=on&search=">Lunch</a>
          <a href="search?side=on&search=">Sides</a>
-             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+             <a href="javascript:void(0);" class="icon" onclick='myFunction()'>&#9776;</a>
        </div> 
 
-        <!-- Title banner -->
+       <!-- Title banner -->
+        <!-- <div class="row-title">
+                <h1 class="mid">Approved</h1>
+                </div>
         <div class="row-title">
-         <h1 class="mid">Approved</h1>
-         </div>
- <div class="row-title">
-         <h3 class="mid">Vegan Recipes</h3>
-       </div>
-</div>
-  <!-- Search bar -->
-  <div class="row mid ban">
-   <div class="search-item"><form
-     class="search"
-             action="{% url 'search' %}"
-     method="get"
-   >
-     <input
-       type="text"
-       class="search_text"
-       name="search"
-       placeholder="Search here..."
-     /></div>
-     <div class="search-item"><button type="submit" class="butt">Search</button></div>
-   </form>
- </div>
+                <h3 class="mid">Vegan Recipes</h3>
+              </div> -->
+      <!-- Navbar 1 -->
+      <!-- <header class="mid">
+        <nav class="menu mid">
+          <div class="row mid">
+            <ul class="menu-nav">
+              <li class="menu-nav_item active mid">
+                <a href="/" class="menu-nav_link mid">Home</a>
+              </li>
+              <li class="menu-nav_item">
+                <a href="search?dinner=on&search=" class="menu-nav_link"
+                  >Dinner</a
+                >
+              </li>
+              <li class="menu-nav_item">
+                <a href="search?lunch=on&search=" class="menu-nav_link"
+                  >Lunch</a
+                >
+              </li>
+              <li class="menu-nav_item">
+                <a href="search?side=on&search=" class="menu-nav_link">Sides</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header> -->
+
+    </div>
+          
+    <!-- Search bar -->
+    <div class="row mid ban">
+      <div class="search-item"><form
+        class="search"
+                action="{% url 'search' %}"
+        method="get"
+      >
+        <input
+          type="text"
+          class="search_text"
+          name="search"
+          placeholder="Search here..."
+        /></div>
+        <div class="search-item"><button type="submit" class="butt">Search</button></div>
+      </form>
+    </div>
    
    <!-- Main body -->
   
@@ -191,6 +218,8 @@
 
 
 </div>
+<!-- Back to Top -->
+<a href="#toppy" class="mid" style="padding-bottom: 5px;"><h5>Back to top</h5></a>
 </div>
 <!-- Footer -->
 <footer class="page-footer text-center text-md-left pt-0">

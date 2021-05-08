@@ -23,7 +23,7 @@
   <div class="banner mid" style="height: 200px;">
 <!-- Navbar Responsive -->
 <div class="topnav mid" id="myTopnav">
-   <a href="/" class="">Home</a>
+   <a href="/" class="" id="toppy">Home</a>
    <a href="search?dinner=on&search=">Dinner</a>
    <a href="search?lunch=on&search=">Lunch</a>
    <a href="search?side=on&search=">Sides</a>
@@ -31,7 +31,7 @@
  </div> 
 </div>
 <!-- Search bar -->
-<div class="row mid ban">
+<div class="row mid ban2">
    <div class="search-item"><form
      class="search"
              action="{% url 'search' %}"
@@ -74,17 +74,19 @@
    background-size: cover;">
 
       <!-- direction grid -->
-      <div class="container">
+      <div class="container mid2">
               <div class="col">
                <h2 class="tit-detail">Ingredients</h2>
-               <pre style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:100%; width: 90%; height: 90%; padding-left: 20px;">{{recipe.ingredients}}</pre>
+               <pre style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:100%; width: 95%; height: 90%; padding-left: 20px;">{{recipe.ingredients}}</pre>
             </div>
             <div class="col">
                <h2 class="tit-detail">Instructions</h2>
-               <pre style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:100%; width: 90%; height: 90%; padding-left: 20px;">{{recipe.directions}}</pre>
+               <pre style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:100%; width: 95%; height: 90%; padding-left: 20px;">{{recipe.directions}}</pre>
             </div>
          </div>
    </div>
+   <!-- Back to Top -->
+   <a href="#toppy" class="mid" style="padding-bottom: 5px;"><h5>Back to top</h5></a>
    </div>
    
 <!-- Footer -->

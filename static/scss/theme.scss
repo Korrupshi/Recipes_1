@@ -93,11 +93,11 @@ nav {
 // Search function
 // SEARCH BEGINS
 .search {
-	width: 30vw;
+	width: 40vw;
 	max-width: 500px;
 	height: 40px;
 	background: rgba($primary-color, 0.9);
-	border-radius: 3px;
+	// border-radius: 3px;
 	border: 1px solid $text-color;
 
 	.search-item {
@@ -111,7 +111,7 @@ nav {
 		color: #ccc;
 		border: 0;
 		background: transparent;
-		border-radius: 3px 0 0 3px;
+		// border-radius: 3px 0 0 3px;
 		&:focus {
 			outline: 0;
 			background: transparent;
@@ -120,7 +120,6 @@ nav {
 }
 
 .butt {
-	border: 1px solid $text-color;
 	border: 0;
 	padding: 0;
 	cursor: pointer;
@@ -128,9 +127,9 @@ nav {
 	width: 15vw;
 	max-width: 120px;
 	color: $text-color;
-	background: rgba($secondary-color, 0.4);
+	background: rgba($secondary-color, 0.6);
 	border: 1px solid $text-color;
-	border-radius: 0 3px 3px 0;
+	// border-radius: 0 3px 3px 0;
 	&:hover {
 		background: $text-color;
 		color: $secondary-color;

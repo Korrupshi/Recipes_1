@@ -38,9 +38,24 @@ pre {
       align-content: center;
 }
 
+.mid2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .ban {
+  margin-top: -200px;
+  margin-bottom: 200px;
+}
+
+.ban2 {
   margin-top: -100px;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 .mmin {
@@ -484,11 +499,10 @@ nav {
 }
 
 .search {
-  width: 30vw;
+  width: 40vw;
   max-width: 500px;
   height: 40px;
   background: rgba(31, 33, 35, 0.9);
-  border-radius: 3px;
   border: 1px solid white;
 }
 
@@ -502,7 +516,6 @@ nav {
   color: #ccc;
   border: 0;
   background: transparent;
-  border-radius: 3px 0 0 3px;
 }
 
 .search input:focus {
@@ -511,7 +524,6 @@ nav {
 }
 
 .butt {
-  border: 1px solid white;
   border: 0;
   padding: 0;
   cursor: pointer;
@@ -519,9 +531,8 @@ nav {
   width: 15vw;
   max-width: 120px;
   color: white;
-  background: rgba(0, 61, 69, 0.4);
+  background: rgba(0, 61, 69, 0.6);
   border: 1px solid white;
-  border-radius: 0 3px 3px 0;
 }
 
 .butt:hover {

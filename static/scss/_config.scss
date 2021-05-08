@@ -34,10 +34,21 @@ pre {
 	margin: 0 auto;
 	align-content: center;
 }
+.mid2 {
+	justify-content: center;
+
+	text-align: center;
+	margin: 0 auto;
+	align-content: center;
+}
 
 .ban {
+	margin-top: -200px;
+	margin-bottom: 200px;
+}
+.ban2 {
 	margin-top: -100px;
-	margin-bottom: 130px;
+	margin-bottom: 100px;
 }
 .mmin {
 	margin-top: 0px;
@@ -106,7 +117,7 @@ pre {
 .topnav a:hover,
 .dropdown:hover .dropbtn {
 	background-color: $secondary-color;
-	color: white;
+	color: $text-color;
 }
 
 /* Add a grey background to dropdown links on hover */

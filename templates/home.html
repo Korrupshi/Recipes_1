@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Approved Vegan Recipes - If its not good, its not here!</title>
+    <title>Approved Vegan Recipes - If it's not good, it's not here!</title>
 
     <!-- Bootstrap core CSS -->
     <script
@@ -33,27 +33,28 @@
       src="https://kit.fontawesome.com/747b07fb68.js"
       crossorigin="anonymous"
     ></script>
+    
   </head>
   <body>
     <!-- Main banner -->
     <div class="banner mid">
       
-
-      <!-- Navbar Responsive -->
+  
+      <!-- Navbar Responsive 2-->
       <div class="topnav mid" id="myTopnav">
-        <a href="/" class="active">Home</a>
+        <a href="/" class="active" id="toppy">Home</a>
         <a href="search?dinner=on&search=">Dinner</a>
         <a href="search?lunch=on&search=">Lunch</a>
         <a href="search?side=on&search=">Sides</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div> 
       <!-- Title banner -->
-        <div class="row-title">
+        <!-- <div class="row-title">
                 <h1 class="mid">Approved</h1>
                 </div>
         <div class="row-title">
                 <h3 class="mid">Vegan Recipes</h3>
-              </div>
+              </div> -->
       <!-- Navbar 1 -->
       <!-- <header class="mid">
         <nav class="menu mid">
@@ -135,7 +136,10 @@
         </li>
         {% endfor %}
       </ul>
+      <!-- Back to Top -->
+      <a href="#toppy"><h5>Back to top</h5></a>
     </div>
+
 
     <!-- Footer -->
     <footer class="page-footer text-center text-md-left pt-0">
@@ -159,6 +163,7 @@ function myFunction() {
     x.className = "topnav";
   }
 } 
+
 </script>
   </body>
 </html>

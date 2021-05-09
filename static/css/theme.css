@@ -97,6 +97,7 @@ pre {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 /* Style the links inside the navigation bar */

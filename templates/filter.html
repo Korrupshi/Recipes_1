@@ -85,22 +85,29 @@
 
     </div>
           
-    <!-- Search bar -->
-    <div class="row mid ban">
-      <div class="search-item"><form
-        class="search"
-                action="{% url 'search' %}"
-        method="get"
-      >
-        <input
-          type="text"
-          class="search_text"
-          name="search"
-          placeholder="Search here..."
-        /></div>
-        <div class="search-item"><button type="submit" class="butt">Search</button></div>
-      </form>
-    </div>
+   <!-- Search bar -->
+		<div class="row mid ban">
+			<div class="search-item">
+				<form action="{% url 'search' %}" method="get">
+					<input
+						type="text"
+						class="search"
+						name="search"
+						placeholder="Search here..."
+						style="color: #ccc; padding-left: 10px; margin: 0"
+					/>
+
+					<button
+						type="submit"
+						class="butt"
+						id="search2"
+						style="margin-left: -5px"
+					>
+						Search
+					</button>
+				</form>
+			</div>
+		</div>
    
    <!-- Main body -->
   

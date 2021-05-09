@@ -92,31 +92,39 @@ nav {
 
 // Search function
 // SEARCH BEGINS
+.search-item {
+	position: relative;
+}
+form {
+	padding: 5px 0 0 0;
+	margin: 0;
+}
 .search {
+	display: inline-block;
 	width: 40vw;
 	max-width: 500px;
 	height: 40px;
 	background: rgba($primary-color, 0.9);
 	// border-radius: 3px;
 	border: 1px solid $text-color;
-
-	.search-item {
-		display: inline-block;
-	}
-
-	input {
-		// width: 370px;
-		padding: 10px 5px;
-		float: left;
-		color: #ccc;
-		border: 0;
+	padding-left: 10px;
+}
+input {
+	vertical-align: top;
+	padding-left: 10px;
+	// float: left;
+	color: #ccc;
+	border: 0;
+	background: transparent;
+	// border-radius: 3px 0 0 3px;
+	&:focus {
+		outline: 0;
 		background: transparent;
-		// border-radius: 3px 0 0 3px;
-		&:focus {
-			outline: 0;
-			background: transparent;
-		}
 	}
+}
+
+#search2 {
+	display: inline-block;
 }
 
 .butt {

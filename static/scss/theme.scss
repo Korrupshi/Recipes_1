@@ -115,11 +115,11 @@ input {
 	// float: left;
 	color: #ccc;
 	border: 0;
-	background: transparent;
+	background: rgba($primary-color, 0.9);
 	// border-radius: 3px 0 0 3px;
 	&:focus {
 		outline: 0;
-		background: transparent;
+		background: rgba($primary-color, 0.9);
 	}
 }
 

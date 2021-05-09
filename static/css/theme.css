@@ -522,12 +522,12 @@ input {
   padding-left: 10px;
   color: #ccc;
   border: 0;
-  background: transparent;
+  background: rgba(31, 33, 35, 0.9);
 }
 
 input:focus {
   outline: 0;
-  background: transparent;
+  background: rgba(31, 33, 35, 0.9);
 }
 
 #search2 {

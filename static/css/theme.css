@@ -498,29 +498,40 @@ nav {
   color: #eaf1ff;
 }
 
+.search-item {
+  position: relative;
+}
+
+form {
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
 .search {
+  display: inline-block;
   width: 40vw;
   max-width: 500px;
   height: 40px;
   background: rgba(31, 33, 35, 0.9);
   border: 1px solid white;
+  padding-left: 10px;
 }
 
-.search .search-item {
-  display: inline-block;
-}
-
-.search input {
-  padding: 10px 5px;
-  float: left;
+input {
+  vertical-align: top;
+  padding-left: 10px;
   color: #ccc;
   border: 0;
   background: transparent;
 }
 
-.search input:focus {
+input:focus {
   outline: 0;
   background: transparent;
+}
+
+#search2 {
+  display: inline-block;
 }
 
 .butt {
